@@ -1,1 +1,71 @@
+## YVideoPalyer
+
+* 简单的方式加载Video框架: 一行代码加载! 一行代码更新!
+
+    * [功能 - ( function )](#功能)
+    * [简介 - ( introduction )](#简介)
+    * [使用 - ( use )](#使用)
+		* [加载 - ( load )](#加载)
+		* [更新 - ( update )](#更新)
+    * [期待 - ( hope )](#期待)
+
+
+### <a id="功能"></a>功能
+* 支持本地视频&网络视频
+* 开始&暂停
+* 最大化&还原
+* 图像左侧上下调节 : 亮度 
+* 图像右侧上下调节 : 音量
+* 左右滑动 : 快进快退
+ 
+### <a id="简介"></a>简介
+- 这是一个UIView的子类,它可以加载到你所需要的任何位置.
+- 它可以是一个小窗口,也可以是一个全屏的窗口
+- 支持方向识别,横屏时自动最大化
+
+![(播放样式)](http://images2015.cnblogs.com/blog/881202/201604/881202-20160411110636207-1067249997.gif)
+
+### <a id="使用"></a>使用
+
+#### 加载:
+```
+导入头文件
+#import "YVideoPlayerView.h"
+```
+
+```
+yVideoPlayerView = [YVideoPlayerView initWithVideoName:@"视频名称1" frame:CGRectMake(0,20,200,150) path:@"http://videoPath" onViewControll:self];
+
+初始化方法
++ (instancetype)initWithVideoName:(NSString *)name frame:(CGRect)frame path:(NSString *)path onViewControll:(UIViewController *)OnViewController;
+
+name : 视频名称
+frame : 视频位置
+path : 视频路径
+onViewController : 加载视频所在的ViewController -> 一般写self
+```
+
+#### 更新:
+```
+yVideoPlayerView = [yVideoPlayerView updateVideoWithName:@"视频名称2" path:@"http://videoPath2" onViewController:self];
+
+注意 : 这是一个对象方法
+- (instancetype)updateVideoWithName:(NSString *)name path:(NSString *)path onViewController :(UIViewController *)OnViewController;
+
+name : 视频名称
+path : 视频路径
+onViewController : 加载视频所在的ViewController -> 一般写self
+
+这里不用重写frame -- 参照了初始化时
+```
+
+### 提醒
+* 本框架纯ARC，兼容的系统>=iOS6.0、iPhone\iPad横竖屏
+* 横竖屏需要手机关闭横竖排方向锁定
+* App至少要开启LandScape Left 或 LandScape Right其中的一项. 如App其他页面不能转屏,用代码锁定!
+
+### 期待
+* 如果在使用过程中遇到BUG，希望你能告诉我，谢谢. 我的email : huyanpeng_ios@126.com
+* 如果在使用过程中发现功能不够用，您可以自定义添加功能 , 也可以告诉我，我非常想为这个框架增加更多好用的功能 ，我也同样期待您的加入一起完善这个框架 谢谢
+* 如果您喜欢,劳烦您点个`star`! thank you !
 
