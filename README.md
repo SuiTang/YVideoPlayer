@@ -23,7 +23,7 @@
 - 它可以是一个小窗口,也可以是一个全屏的窗口
 - 支持方向识别,横屏时自动最大化
 
-![(播放样式)](http://images2015.cnblogs.com/blog/881202/201604/881202-20160411110636207-1067249997.gif)
+![](http://images2015.cnblogs.com/blog/881202/201604/881202-20160411110636207-1067249997.gif)
 
 ### <a id="使用"></a>使用
 
@@ -62,7 +62,29 @@ onViewController : 加载视频所在的ViewController -> 一般写self
 ### 提醒
 * 本框架纯ARC，兼容的系统>=iOS6.0、iPhone\iPad横竖屏
 * 横竖屏需要手机关闭横竖排方向锁定
-* App至少要开启LandScape Left 或 LandScape Right其中的一项. 如App其他页面不能转屏,用代码锁定!
+* App至少要开启`LandScape Left` 或 `LandScape Right`其中的一项. 如App其他页面不能转屏,用代码锁定!
+	* 在其他不需要转屏的根视图里写如下代码:
+	
+	```
+	- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+	    return UIInterfaceOrientationMaskPortrait;
+	}
+	```
+
+	* 在加载YVideoPlayerView的ViewController里写如下代码:
+
+	```
+	//只让这个页面转动
+	- (BOOL)shouldAutorotate {
+	    return YES;
+	}
+	- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+	    if (yVideoPlayerView.canOrientationChange == YES) {  //刚进入页面是竖屏
+	        return UIInterfaceOrientationMaskAllButUpsideDown;
+	    }
+	    return UIInterfaceOrientationMaskPortrait;
+	}
+```
 
 ### 期待
 * 如果在使用过程中遇到BUG，希望你能告诉我，谢谢. 我的email : huyanpeng_ios@126.com
