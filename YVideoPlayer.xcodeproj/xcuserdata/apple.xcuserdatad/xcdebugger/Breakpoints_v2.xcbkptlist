@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
-            timestampString = "481793065.491718"
+            timestampString = "482295225.618819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
             landmarkName = "-setButtonAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
-            timestampString = "481793065.491718"
+            timestampString = "482295225.618819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "510"
-            endingLineNumber = "510"
+            startingLineNumber = "511"
+            endingLineNumber = "511"
             landmarkName = "-fullScreen:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
-            timestampString = "481796299.808678"
+            timestampString = "482295225.618819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "629"
-            endingLineNumber = "629"
+            startingLineNumber = "630"
+            endingLineNumber = "630"
             landmarkName = "-back:"
             landmarkType = "5">
          </BreakpointContent>

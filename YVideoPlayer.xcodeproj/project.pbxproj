@@ -17,10 +17,10 @@
 		182A32AB1CABB32100E12C32 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A32AA1CABB32100E12C32 /* PlayerView.m */; };
 		182A32AE1CABB37400E12C32 /* YVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A32AD1CABB37400E12C32 /* YVideoPlayerView.m */; };
 		182A32B01CABB3F500E12C32 /* YVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182A32AF1CABB3F500E12C32 /* YVideoPlayerView.xib */; };
-		182A32B31CABB87E00E12C32 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182A32B21CABB87E00E12C32 /* ShowViewController.m */; };
 		1830DD411CACF03100A77705 /* YVideoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830DD401CACF03100A77705 /* YVideoNavigationController.m */; };
 		1830DD441CACF4B100A77705 /* 本地测试横屏.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1830DD421CACF4B100A77705 /* 本地测试横屏.mov */; };
 		1830DD451CACF4B100A77705 /* 本地测试竖屏.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1830DD431CACF4B100A77705 /* 本地测试竖屏.mp4 */; };
+		184039E91CBF3D6B00EF75D8 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184039E81CBF3D6B00EF75D8 /* ShowViewController.m */; };
 		185296101CB3B89100C77FED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1852960E1CB3B89100C77FED /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +41,12 @@
 		182A32AC1CABB37400E12C32 /* YVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVideoPlayerView.h; sourceTree = "<group>"; };
 		182A32AD1CABB37400E12C32 /* YVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVideoPlayerView.m; sourceTree = "<group>"; };
 		182A32AF1CABB3F500E12C32 /* YVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YVideoPlayerView.xib; sourceTree = "<group>"; };
-		182A32B11CABB87E00E12C32 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowViewController.h; path = YVideoPalyer/ShowViewController.h; sourceTree = "<group>"; };
-		182A32B21CABB87E00E12C32 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowViewController.m; path = YVideoPalyer/ShowViewController.m; sourceTree = "<group>"; };
 		1830DD3F1CACF03100A77705 /* YVideoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YVideoNavigationController.h; sourceTree = "<group>"; };
 		1830DD401CACF03100A77705 /* YVideoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YVideoNavigationController.m; sourceTree = "<group>"; };
 		1830DD421CACF4B100A77705 /* 本地测试横屏.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "本地测试横屏.mov"; sourceTree = "<group>"; };
 		1830DD431CACF4B100A77705 /* 本地测试竖屏.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "本地测试竖屏.mp4"; sourceTree = "<group>"; };
+		184039E71CBF3D6B00EF75D8 /* ShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		184039E81CBF3D6B00EF75D8 /* ShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		1852960F1CB3B89100C77FED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,8 +88,8 @@
 				1830DD401CACF03100A77705 /* YVideoNavigationController.m */,
 				182A32921CABB2AF00E12C32 /* ViewController.h */,
 				182A32931CABB2AF00E12C32 /* ViewController.m */,
-				182A32B11CABB87E00E12C32 /* ShowViewController.h */,
-				182A32B21CABB87E00E12C32 /* ShowViewController.m */,
+				184039E71CBF3D6B00EF75D8 /* ShowViewController.h */,
+				184039E81CBF3D6B00EF75D8 /* ShowViewController.m */,
 				1830DD421CACF4B100A77705 /* 本地测试横屏.mov */,
 				1830DD431CACF4B100A77705 /* 本地测试竖屏.mp4 */,
 				1852960E1CB3B89100C77FED /* Main.storyboard */,
@@ -198,9 +198,9 @@
 			files = (
 				182A32941CABB2AF00E12C32 /* ViewController.m in Sources */,
 				182A32AB1CABB32100E12C32 /* PlayerView.m in Sources */,
+				184039E91CBF3D6B00EF75D8 /* ShowViewController.m in Sources */,
 				182A32911CABB2AF00E12C32 /* AppDelegate.m in Sources */,
 				1830DD411CACF03100A77705 /* YVideoNavigationController.m in Sources */,
-				182A32B31CABB87E00E12C32 /* ShowViewController.m in Sources */,
 				182A329A1CABB2AF00E12C32 /* YVideoPlayer.xcdatamodeld in Sources */,
 				182A328E1CABB2AF00E12C32 /* main.m in Sources */,
 				182A32AE1CABB37400E12C32 /* YVideoPlayerView.m in Sources */,

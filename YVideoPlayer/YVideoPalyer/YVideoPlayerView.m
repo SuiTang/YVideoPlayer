@@ -114,6 +114,7 @@ UIViewController * onViewController;
     UIImage * thumbImage = [UIImage imageNamed:@"slider.png"];
     thumbImage = [self OriginImage:thumbImage scaleToSize:CGSizeMake(20, 20)];
     [progressSlider setThumbImage:thumbImage forState:UIControlStateNormal];
+    [progressSlider setThumbImage:thumbImage forState:UIControlStateHighlighted];
 
     //添加点击屏幕弹出上下View事件
     tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapScreen:)];
