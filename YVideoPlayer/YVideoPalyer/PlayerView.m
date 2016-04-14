@@ -35,7 +35,7 @@ CGRect initialframe;
 - (void)preparePlayWithPath:(NSString *) path {
     self.userInteractionEnabled = NO;
     //获取文件的路径
-    NSLog(@"path=%@",path);
+//    NSLog(@"path=%@",path);
     NSURL * sourceMovieURL = [[NSURL alloc]init];
     if (path == nil) {
         NSLog(@"视频路径不正确");
@@ -70,7 +70,7 @@ CGRect initialframe;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"status"]) {
-        NSLog(@"_player.status=%ld",(long)_player.status);
+//        NSLog(@"_player.status=%ld",(long)_player.status);
         if (_player.status == AVPlayerStatusFailed) {//准备失败
             [[NSNotificationCenter defaultCenter] postNotificationName:AVPlayerItemFailedToPlayToEndTimeNotification object:nil];
             return;
@@ -82,7 +82,7 @@ CGRect initialframe;
     }
     //加载完成
     else if ([keyPath isEqualToString:@"duration"]) {
-        NSLog(@"(CGFloat)CMTimeGetSeconds(_playerItem.duration)=%f",(CGFloat)CMTimeGetSeconds(_playerItem.duration));
+//        NSLog(@"(CGFloat)CMTimeGetSeconds(_playerItem.duration)=%f",(CGFloat)CMTimeGetSeconds(_playerItem.duration));
         if ((CGFloat)CMTimeGetSeconds(_playerItem.duration) != duration) {
             duration = (CGFloat)CMTimeGetSeconds(_playerItem.duration);
             [[NSNotificationCenter defaultCenter] postNotificationName:@"startPlay" object:nil];
