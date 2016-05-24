@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface ShowViewController : UIViewController//<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *videoView;
-@property (weak, nonatomic) IBOutlet UITableView *table;
+
+@property (weak, nonatomic) IBOutlet UIView *videoView2;
+
+//@property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end

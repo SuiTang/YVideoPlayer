@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger,TopAndBottomShouldShow) {
 
 @property (assign,nonatomic) BOOL canOrientationChange;
 
-@property (assign,nonatomic) BOOL isTopAndBottomShowing;
+@property (assign,nonatomic) __block BOOL isTopAndBottomShowing;
 
 @property (assign,nonatomic) __block NSString * isTopAndBottomShouldShow; //1:准备隐藏 2:保持显示
 
@@ -69,7 +69,10 @@ typedef NS_ENUM(NSInteger,TopAndBottomShouldShow) {
 
 @property (assign,nonatomic) int touchTime;  //记录滑动开始的时间
 
-+ (instancetype)initWithVideoName:(NSString *)name frame:(CGRect)frame path:(NSString *)path onViewControll:(UIViewController *)OnViewController;
+- (instancetype)initWithFrame:(CGRect)frame VideoName:(NSString *)name Path:(NSString *)path OnViewController:(UIViewController *)OnViewController;
 - (instancetype)updateVideoWithName:(NSString *)name path:(NSString *)path onViewController :(UIViewController *)OnViewController;
 - (void)back:(id)sender;
+- (void)playOrPause:(id)sender ;
+- (void)back:(id)sender ;
+- (void)clean;
 @end

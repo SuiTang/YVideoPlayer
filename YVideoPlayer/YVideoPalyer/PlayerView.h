@@ -19,8 +19,7 @@
 
 @property (strong,nonatomic) AVAsset * movieAsset;
 
-+ (instancetype)playerWithPath : (NSString *) path Frame:(CGRect)frame;
+- (instancetype)initWithFrame:(CGRect)frame Path:(NSString *)path;
 - (void)preparePlayWithPath:(NSString *) path;
-- (void)updateVideoWithPath:(NSString *) path;
 - (void)back:(id)sender;
 @end

@@ -17,22 +17,21 @@
 CGFloat duration;
 PlayerView * instace;
 CGRect initialframe;
-+ (instancetype)playerWithPath : (NSString *) path Frame:(CGRect)frame {
-    if (instace == nil) {
-        @synchronized(self) {
-            if (instace == nil) {
-                instace = [[self alloc]init];
-                instace.frame = frame;
-                initialframe = frame;
-                [instace preparePlayWithPath:path];
-            }
-        }
+
+- (instancetype)initWithFrame:(CGRect)frame Path:(NSString *)path{
+    
+    self = [super initWithFrame:frame];
+    if (self) {
+        initialframe = frame;
+        [self preparePlayWithPath:path];
     }
-    return instace;
+
+    return self;
 }
 
 /** 播放视频 */
 - (void)preparePlayWithPath:(NSString *) path {
+    self.frame = initialframe;
     self.userInteractionEnabled = NO;
     //获取文件的路径
 //    NSLog(@"path=%@",path);

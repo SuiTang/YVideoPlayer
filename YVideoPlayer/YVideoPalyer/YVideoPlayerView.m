@@ -45,31 +45,28 @@ UIViewController * onViewController;
 @synthesize playerView,bottomView,currentLabel,leftLabel,playButton,fullScreenButton,progressSlider,topView,titleLabel,backButton,centerImage,centerLabel,isPlaying,isMaxing,isTopAndBottomShowing,canOrientationChange,topGradientLayer,bottomGradientLayer,panGesture,tapGesture,bottomViewPanGesture,topAndBottomViewHiddenTimer,hiddenCenterViewTimer,playTimer,hiddenBottomViewTimer,panDirection,panX,panY,brightness,volumeness,volumeViewSlider,volumeView,isTopAndBottomShouldShow,touchTime,leftArrow,volumeLabel,rightArrow,brightLabel,progressView;
 
 #pragma mark - 初始化
-+ (instancetype)initWithVideoName:(NSString *)name frame:(CGRect)frame path:(NSString *)path onViewControll:(UIViewController *)OnViewController{
-    if (selfView == nil) {
-        @synchronized (selfView) {
-            if (selfView == nil) {
-                instanceName = name;
-                instanceFrame = frame;
-                instancePath = path;
-                onViewController = OnViewController;
-                //开始监听方向改变
-                [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-                selfView = [[NSBundle mainBundle] loadNibNamed:@"YVideoPlayerView" owner:nil options:nil].firstObject;
-            }
-        }
+- (instancetype)initWithFrame:(CGRect)frame VideoName:(NSString *)name Path:(NSString *)path OnViewController:(UIViewController *)OnViewController {
+    self = [super initWithFrame:frame];
+    if (self) {
+        instanceName = name;
+        instanceFrame = frame;
+        instancePath = path;
+        onViewController = OnViewController;
+        //开始监听方向改变
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        selfView = [[NSBundle mainBundle] loadNibNamed:@"YVideoPlayerView" owner:nil options:nil].firstObject;
     }
-    return selfView;
+    return self;
 }
 
-- (instancetype)updateVideoWithName:(NSString *)name path:(NSString *)path onViewController:(UIViewController *)OnViewController{
+- (instancetype)initNewVideoWithName:(NSString *)name path:(NSString *)path onViewController:(UIViewController *)OnViewController{
     [[[UIApplication sharedApplication] keyWindow] willRemoveSubview:self];
     if (self != nil) {
         [self removeFromSuperview];
         [self clean];
-        selfView = [YVideoPlayerView initWithVideoName:name frame:instanceFrame path:path onViewControll:OnViewController];
+        self = [[YVideoPlayerView alloc]initWithFrame:instanceFrame VideoName:name Path:path OnViewController:OnViewController];
     }
-    return selfView;
+    return self;
 }
 
 - (void)awakeFromNib {
@@ -156,7 +153,7 @@ UIViewController * onViewController;
 
 - (void)playWithPath:(NSString *)path {
     //初始化player
-    playerView = [PlayerView playerWithPath:path Frame:CGRectMake(0, 0, instanceFrame.size.width, instanceFrame.size.height)];
+    playerView = [[PlayerView alloc]initWithFrame:CGRectMake(0, 0, instanceFrame.size.width, instanceFrame.size.height) Path:path];
     //添加在线视频缓冲通知
     [playerView.playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
     //添加player到view的最下层,开始播放
@@ -195,6 +192,8 @@ UIViewController * onViewController;
     //隐藏上下View
     [self topAndBottomViewWillDisAppear:nil];
     isTopAndBottomShowing = YES;
+    
+    [self playOrPause:nil];
 }
 //结束播放
 - (void)playEnd:(id)sender {
@@ -592,7 +591,6 @@ UIViewController * onViewController;
                                   (__bridge id)[UIColor clearColor].CGColor];
     //设定颜色分割点
     topGradientLayer.locations = @[@(0.0f) ,@(1.0f)];
-    
     [topView.layer addSublayer:topGradientLayer];
     
     //初始buttom化渐变层

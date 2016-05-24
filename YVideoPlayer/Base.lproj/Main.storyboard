@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -66,20 +65,22 @@
                                     <constraint firstAttribute="height" constant="172" id="fBF-2V-be9"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gyE-Xo-x30">
-                                <rect key="frame" x="-4" y="200" width="328" height="368"/>
-                                <color key="backgroundColor" red="0.89182698410000005" green="1" blue="0.93263695449999995" alpha="1" colorSpace="calibratedRGB"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiC-mw-fen">
+                                <rect key="frame" x="0.0" y="200" width="320" height="172"/>
+                                <color key="backgroundColor" red="1" green="0.66736267100690183" blue="0.57808705990236753" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="deg-kb-nBc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="172" id="ofo-1K-HVU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gyE-Xo-x30" firstAttribute="top" secondItem="73b-kY-bbr" secondAttribute="bottom" constant="8" id="Cr1-tg-aVi"/>
-                            <constraint firstItem="gyE-Xo-x30" firstAttribute="leading" secondItem="W0q-0o-FZz" secondAttribute="leadingMargin" constant="-20" id="T2U-xf-Pm4"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiC-mw-fen" secondAttribute="trailing" id="23H-Kq-7a4"/>
+                            <constraint firstItem="ZiC-mw-fen" firstAttribute="leading" secondItem="W0q-0o-FZz" secondAttribute="leading" id="Cvw-Vz-KqZ"/>
+                            <constraint firstItem="ZiC-mw-fen" firstAttribute="top" secondItem="73b-kY-bbr" secondAttribute="bottom" constant="8" id="MVr-jg-PeZ"/>
                             <constraint firstItem="73b-kY-bbr" firstAttribute="top" secondItem="QtH-Zl-e1Y" secondAttribute="bottom" constant="8" id="THr-Jd-ncI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gyE-Xo-x30" secondAttribute="trailing" constant="-20" id="Zpt-Aj-tVT"/>
                             <constraint firstItem="73b-kY-bbr" firstAttribute="top" secondItem="QtH-Zl-e1Y" secondAttribute="bottom" id="aDI-Nv-wHH"/>
-                            <constraint firstItem="Eo2-Um-Ber" firstAttribute="top" secondItem="gyE-Xo-x30" secondAttribute="bottom" id="hc1-oF-GZ4"/>
-                            <constraint firstItem="gyE-Xo-x30" firstAttribute="top" secondItem="73b-kY-bbr" secondAttribute="bottom" constant="8" id="p6V-k9-IlR"/>
                             <constraint firstItem="73b-kY-bbr" firstAttribute="leading" secondItem="W0q-0o-FZz" secondAttribute="leading" id="r25-Dq-XCd"/>
                             <constraint firstAttribute="trailing" secondItem="73b-kY-bbr" secondAttribute="trailing" id="yoM-FO-QJ2"/>
                         </constraints>
@@ -91,8 +92,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="table" destination="gyE-Xo-x30" id="qwM-x5-WUY"/>
                         <outlet property="videoView" destination="73b-kY-bbr" id="ctd-ym-nVF"/>
+                        <outlet property="videoView2" destination="ZiC-mw-fen" id="8f7-uw-nZe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDU-hG-V3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
