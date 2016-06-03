@@ -10,11 +10,19 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
+<<<<<<< Updated upstream
             timestampString = "485334672.646224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "461"
             endingLineNumber = "461"
+=======
+            timestampString = "486615192.06167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "464"
+            endingLineNumber = "464"
+>>>>>>> Stashed changes
             landmarkName = "-setButtonAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +34,19 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
+<<<<<<< Updated upstream
             timestampString = "485334672.646224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "510"
             endingLineNumber = "510"
+=======
+            timestampString = "486615192.06167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "513"
+            endingLineNumber = "513"
+>>>>>>> Stashed changes
             landmarkName = "-fullScreen:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +58,19 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "YVideoPlayer/YVideoPalyer/YVideoPlayerView.m"
+<<<<<<< Updated upstream
             timestampString = "485334672.646224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "629"
             endingLineNumber = "629"
+=======
+            timestampString = "486615192.06167"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "632"
+            endingLineNumber = "632"
+>>>>>>> Stashed changes
             landmarkName = "-back:"
             landmarkType = "5">
          </BreakpointContent>

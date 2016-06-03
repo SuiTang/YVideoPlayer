@@ -65,11 +65,19 @@ typedef NS_ENUM(NSInteger,TopAndBottomShouldShow) {
 
 @property (assign,nonatomic) CGFloat panX;
 
-@property (assign,nonatomic) CGFloat panY;  //
+@property (assign,nonatomic) CGFloat panY;
 
 @property (assign,nonatomic) int touchTime;  //记录滑动开始的时间
 
+<<<<<<< Updated upstream
 - (instancetype)initWithFrame:(CGRect)frame VideoName:(NSString *)name Path:(NSString *)path OnViewController:(UIViewController *)OnViewController;
+=======
+@property (strong,nonatomic) UIImage * thumbnail;  //在切换视频和返回时记录当前画面
+
+@property (assign,nonatomic) CMTime cmtime;  //在切换视频和返回时记录当前时间
+
++ (instancetype)initWithVideoName:(NSString *)name frame:(CGRect)frame path:(NSString *)path onViewControll:(UIViewController *)OnViewController;
+>>>>>>> Stashed changes
 - (instancetype)updateVideoWithName:(NSString *)name path:(NSString *)path onViewController :(UIViewController *)OnViewController;
 - (void)back:(id)sender;
 - (void)playOrPause:(id)sender ;

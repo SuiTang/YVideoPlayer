@@ -632,6 +632,10 @@ UIViewController * onViewController;
 
 - (void)clean{
     [[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES];
+    //记录退后时的时间
+    self.cmtime = playerView.playerItem.currentTime;
+    //记录退后时的画面
+    self.thumbnail = [self getThumbnail];
     
     [self removeObserver];
     
@@ -655,6 +659,22 @@ UIViewController * onViewController;
     [hiddenBottomViewTimer invalidate];
     //清空自己
     selfView = nil;
+}
+
+- (UIImage *)getThumbnail {
+    AVAssetImageGenerator * imageGenerator = [[AVAssetImageGenerator alloc]initWithAsset:playerView.movieAsset];
+    CMTime time = CMTimeMakeWithSeconds((CMTimeGetSeconds(playerView.playerItem.currentTime)), 90);
+    struct CGImage * cgimage;
+    @try {
+        cgimage = [imageGenerator copyCGImageAtTime:time actualTime:nil error:nil];
+    } @catch (NSException *exception) {
+        NSLog(@"exception=%@",exception);
+    }
+    UIImage * image;
+    if (cgimage != nil) {
+        image = [UIImage imageWithCGImage:cgimage];
+    }
+    return image;
 }
 
 - (void)removeObserver {
